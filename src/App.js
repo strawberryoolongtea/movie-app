@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Strawberry from "./Strawberry";
+import datas from './data';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section>
+      <h1>Hello World! 🔮</h1>
+      <ul>
+        {datas.map(hypnosismic => <Strawberry id={hypnosismic.id} division={hypnosismic.division} color={hypnosismic.color} member={hypnosismic.member} />)}
+      </ul>
+      {/* <Strawberry division={datas[0].division} />
+      <Strawberry division={datas[1].division} />
+      <Strawberry division={datas[2].division} />
+      <Strawberry division={datas[3].division} /> */}
+    </section>
   );
 }
 
